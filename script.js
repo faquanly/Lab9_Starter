@@ -27,7 +27,7 @@
   }
 
   function consoleWarn() {
-    console.warn("Console Wanrning")
+    console.warn("Console Warning")
   }
 
   function consoleAssert() {
