@@ -27,7 +27,7 @@
   }
 
   function consoleWarn() {
-    console.warn("Console Wanrn")
+    console.warn("Console Wanrning")
   }
 
   function consoleAssert() {
@@ -58,7 +58,7 @@
   }
 
   function consoleTable() {
-    var people = [
+    let student = [
       {
         first: 'Joe',
         last: 'Smith',
@@ -75,7 +75,7 @@
         GPA: 3.9
       }
     ];
-    console.table(people);
+    console.table(student);
   }
 
   function consoleTime() {
@@ -97,7 +97,8 @@
     theFirst();
   }
 
-  /**Step 3: Try/Catch */
+  /**Step 3: Try/Catch  
+   ** Step 4 Throw and Custom Errors*/
   function getData(data) {
     if (!data) {
       throw new ValidationError("Invalid data");
@@ -109,33 +110,14 @@
     try {
       getData(null)
     } catch (err) {
-      // error handling
       TrackJS.track('Testing TrackJS!');
-      console.error("Bad data, This causes a global error")
+      console.error("Bad input, This causes a global error")
     }
     finally {
       console.log("Inside Finally")
     }
   }
 
-  // function errorFunction() {
-  //   try {
-  //     console.log("Inside try");
-  //     throw new Error("Return error");
-  //     return 10;
-  //   }
-  //   catch(err) {
-  //     console.log("Inside catch");
-  //     return 20;
-  //   }
-  //   finally {
-  //     console.log("Inside finally");
-  //     return 30;
-  //   }
-
-  // }
-
-  /**Step 4 */ 
   class ValidationError extends Error {
     constructor(message) {
       super(message);
